@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - DEE SALON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="DEE SALON Logo" />
+                <span>DEE SALON</span>
+            </a>
+            <button class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h3 class="section-title">Our Work</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/purple/white?text=Haircut" alt="Haircut and style">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/purple/white?text=Balayage" alt="Balayage hair color">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/purple/white?text=Updo" alt="Bridal updo">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/purple/white?text=Manicure" alt="Manicure">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/purple/white?text=Vibrant+Color" alt="Vibrant hair color">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/purple/white?text=Lashes" alt="Eyelash extensions">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/6a11cb/ffffff?text=Style+7" alt="Haircut and style">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/2575fc/ffffff?text=Style+8" alt="Balayage hair color">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/f857a6/ffffff?text=Style+9" alt="Bridal updo">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/ff5858/ffffff?text=Style+10" alt="Manicure">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/c71585/ffffff?text=Style+11" alt="Vibrant hair color">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/483d8b/ffffff?text=Style+12" alt="Eyelash extensions">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DEE SALON. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navUl = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+    </script>
+
+</body>
+</html>
