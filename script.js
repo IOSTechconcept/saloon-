@@ -47,8 +47,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
-    threshold: 0.5,
-    rootMargin: "0px 0px -100px 0px"
+    threshold: 0.25, // Trigger when 25% of the element is visible
+    rootMargin: "0px 0px -50px 0px" // Shrink the viewport by 50px from the bottom
 };
 
 const appearOnScroll = new IntersectionObserver(function(
