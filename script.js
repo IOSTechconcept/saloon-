@@ -75,3 +75,13 @@ if (heroH2 && heroP) {
     // Subsequent animations every 5 seconds
     setInterval(slideInHeroText, 5000);
 }
+
+// Roll-in animation for nav items
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('nav ul li');
+    navItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('roll-in');
+        }, index * 500); // 0.5 second delay
+    });
+});

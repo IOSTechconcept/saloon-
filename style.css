@@ -49,6 +49,11 @@ header .container {
 .logo img {
     max-height: 50px;
     margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 .logo span {
@@ -66,6 +71,22 @@ nav ul {
 
 nav ul li {
     margin-left: 25px;
+    opacity: 0;
+}
+
+@keyframes roll-in {
+    from {
+        transform: rotate(-90deg) translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0) translateX(0);
+        opacity: 1;
+    }
+}
+
+nav ul li.roll-in {
+    animation: roll-in 1s forwards;
 }
 
 nav a {
