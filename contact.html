@@ -8,6 +8,10 @@
 </head>
 <body class="contact-background">
 
+    <div id="preloader">
+        <div class="preloader-button">DEESALON</div>
+    </div>
+
     <header>
         <div class="container">
             <a href="index.html" class="logo">
@@ -40,6 +44,16 @@
                         <p contenteditable="true"><strong>Phone:</strong>+2349049144351</p>
                     </div>
                     <form class="contact-form" action="#" method="post">
+                        <label for="service">Check our gallery to select an option</label>
+                        <select name="service" id="service" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="precision-haircuts">Precision Haircuts</option>
+                            <option value="expert-hair-coloring">Expert Hair Coloring</option>
+                            <option value="luxury-hair-treatments">Luxury Hair Treatments</option>
+                            <option value="bridal-special-occasions">Bridal & Special Occasions</option>
+                            <option value="manicure-pedicure">Manicure & Pedicure</option>
+                            <option value="eyebrow-lash-services">Eyebrow & Lash Services</option>
+                        </select>
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <input type="tel" name="phone" placeholder="Your Phone Number" required>
@@ -58,14 +72,7 @@
         </div>
     </footer>
 
-    <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navUl = document.querySelector('nav ul');
-
-        menuIcon.addEventListener('click', () => {
-            navUl.classList.toggle('show');
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

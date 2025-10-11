@@ -1,3 +1,26 @@
+// Record the time when the script starts
+const loadStartTime = Date.now();
+
+// Preloader
+window.onload = function() {
+    const minDisplayTime = 3000; // 3 seconds
+    const loadTime = Date.now() - loadStartTime;
+
+    const hidePreloader = () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+        }
+        // Initialize animations after preloader is gone
+        initializeAnimations();
+    };
+
+    // Wait for at least minDisplayTime before hiding the preloader
+    const remainingTime = minDisplayTime - loadTime;
+    setTimeout(hidePreloader, remainingTime > 0 ? remainingTime : 0);
+};
+
 
 // Mobile menu toggle
 const menuIcon = document.querySelector('.menu-icon');
@@ -76,12 +99,20 @@ if (heroH2 && heroP) {
     setInterval(slideInHeroText, 5000);
 }
 
-// Roll-in animation for nav items
-document.addEventListener('DOMContentLoaded', () => {
+function initializeAnimations() {
+    // Roll-in animation for nav items
     const navItems = document.querySelectorAll('nav ul li');
     navItems.forEach((item, index) => {
         setTimeout(() => {
             item.classList.add('roll-in');
         }, index * 500); // 0.5 second delay
     });
-});
+
+    // Staggered animation for service items
+    const serviceItems = document.querySelectorAll('.service-item.stagger-in');
+    serviceItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('appear');
+        }, index * 150);
+    });
+}
