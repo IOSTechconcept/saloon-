@@ -304,17 +304,6 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Editable Content */
-[contenteditable="true"] {
-    outline: 2px dashed rgba(255, 255, 255, 0.5);
-    cursor: text;
-    transition: outline 0.3s ease;
-}
-
-[contenteditable="true"]:focus {
-    outline: none;
-}
-
 /* Responsive Design */
 .menu-icon {
     display: none;
