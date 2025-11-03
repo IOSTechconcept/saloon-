@@ -29,6 +29,8 @@ const navUl = document.querySelector('nav ul');
 if (menuIcon && navUl) {
     menuIcon.addEventListener('click', () => {
         navUl.classList.toggle('show');
+        const isExpanded = menuIcon.getAttribute('aria-expanded') === 'true' || false;
+        menuIcon.setAttribute('aria-expanded', !isExpanded);
     });
 }
 
@@ -41,33 +43,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-});
-
-// Fade-in effect on scroll
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-    threshold: 0.25, // Trigger when 25% of the element is visible
-    rootMargin: "0px 0px -50px 0px" // Shrink the viewport by 50px from the bottom
-};
-
-const appearOnScroll = new IntersectionObserver(function(
-    entries,
-    appearOnScroll
-) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
-        }
-    });
-},
-appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
 });
 
 // Slide-in effect for hero text
@@ -112,7 +87,36 @@ function initializeAnimations() {
     const serviceItems = document.querySelectorAll('.service-item.stagger-in');
     serviceItems.forEach((item, index) => {
         setTimeout(() => {
-            item.classList.add('appear');
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
         }, index * 150);
     });
+
+    // Fade-in effect on scroll
+    const faders = document.querySelectorAll('.fade-in');
+
+    const fadeInOnScroll = () => {
+        faders.forEach(fader => {
+            const faderTop = fader.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (faderTop < windowHeight - 50) { // 50px buffer
+                fader.classList.add('appear');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', fadeInOnScroll);
+    fadeInOnScroll(); // Run once on load
 }
+
+// Price button dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const priceButtons = document.querySelectorAll('.price-button');
+
+    priceButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const dropdown = button.nextElementSibling;
+            dropdown.classList.toggle('active');
+        });
+    });
+});

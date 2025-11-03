@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - DEE SALON</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,11 +19,11 @@
                 <img src="logo.png" alt="DEE SALON Logo" />
                 <span>DEE SALON</span>
             </a>
-            <button class="menu-icon">
+            <button class="menu-icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
               <nav>
-                <ul>
+                <ul id="main-menu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -42,18 +43,19 @@
             </div>
         </section>
 
-        <section class="section fade-in welcome-section">
+        <section class="section fade-in welcome-section appear">
             <div class="container">
-                <h3 class="section-title">Welcome to DEE SALON</h3>
+                <h2 class="section-title">Welcome to DEE SALON</h2>
                 <div class="content-box">
                     <p>Step into a world of glamour and relaxation. At DEE SALON, we are dedicated to providing an exceptional salon experience. Our talented stylists are masters of their craft, offering personalized services that cater to your unique style and preferences. From chic haircuts to vibrant color, we are here to make you look and feel your absolute best. Explore our services and book your transformation today.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section fade-in">
+        <section class="section explore-salon-section">
             <div class="container">
-                <h3 class="section-title">Explore Our Salon</h3>
+                <h2 class="section-title">Explore Our Salon</h2>
+                <p class="section-subtitle">Get a glimpse of our beautiful salon and the stunning work we do.</p>
                 <div class="services-grid">
                     <div class="service-item">
                         <h4>About Us</h4>
@@ -79,10 +81,11 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
-            <p>&copy; 2025 DEE SALON. All Rights Reserved.</p>
+            <p>&copy; 2025 DEE SALON. All Rights Reserved.
+            <br>IOS
+            </p>
         </div>
     </footer>
 
