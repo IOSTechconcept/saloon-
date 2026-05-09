@@ -90,6 +90,7 @@ header .container {
     max-height: 50px;
     margin-right: 15px;
     transition: transform 0.3s ease;
+    filter: invert(1) brightness(2);
 }
 .logo img:hover {
     transform: scale(1.1);
