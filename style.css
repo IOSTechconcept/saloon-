@@ -604,3 +604,32 @@ footer {
     position: relative;
     z-index: 2;
 }
+
+
+/* Mobile devices (phones, 480px and below) */
+@media (max-width: 480px) {
+    .preloader-button {
+        font-size: 2.5rem;
+        padding: 10px 25px;
+        border-radius: 8px;
+        max-width: 90%;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+/* Small mobile devices (very narrow phones, 360px and below) */
+@media (max-width: 360px) {
+    .preloader-button {
+        font-size: 2rem;
+        padding: 8px 20px;
+    }
+}
+
+/* Tablets (between 481px and 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    .preloader-button {
+        font-size: 3rem;
+        padding: 12px 30px;
+    }
+}
