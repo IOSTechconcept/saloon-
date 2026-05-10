@@ -101,7 +101,8 @@ header .container {
 
 .logo span {
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: #fff;
 }
 
 /* Navigation */
